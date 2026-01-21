@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FEFFF6;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px; /* 모바일 가독성을 위한 최대 너비 제한 */
+            margin: 0 auto;   /* 화면 중앙 정렬 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content-img {
+            width: 100%;      /* 화면 너비에 맞춤 */
+            height: auto;     /* 이미지 비율 유지 */
+            display: block;
+        }
+
+        /* 버튼 컨테이너: 클릭 영역 설정 */
+        .map-link {
+            text-decoration: none; /* 링크 밑줄 제거 */
+            margin: 30px 0;        /* 상하 여유 공간 */
+            display: block;
+        }
+
+        .map-button-container {
+            position: relative;
+            width: 190px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.2s; /* 클릭 시 시각적 효과 */
+        }
+
+        .map-button-container:active {
+            opacity: 0.7; /* 모바일에서 터치했을 때 살짝 흐려짐 */
+        }
+
+        .vector-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .button-text {
+            position: relative;
+            z-index: 2;
+            color: black;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="./src/page1.png" alt="정보 페이지 1" class="content-img">
+    <img src="./src/page2.png" alt="정보 페이지 2" class="content-img">
+
+    <a href="https://naver.me/xprflo30" target="_blank" rel="noopener noreferrer" class="map-link">
+        <div class="map-button-container">
+            <img src="./src/Vector 1 (1).png" alt="버튼 배경" class="vector-bg">
+            <span class="button-text">네이버 지도로 보기</span>
+        </div>
+    </a>
+</div>
+
+</body>
+</html>
